@@ -1,3 +1,4 @@
+#export data
 install.packages("openxlsx")
 library(openxlsx)
 
@@ -12,3 +13,8 @@ factory <- data.frame(employee_name,id,age,year_of_joining,experience)
 factory
 
 write.xlsx(factory, file="F:/rrr/exportdata.xlsx")
+
+#import data
+library(readxl)
+exportdata <- read_excel("F:/rrr/e.xlsx")
+View(exportdata)
