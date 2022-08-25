@@ -1,0 +1,27 @@
+install.packages('readxl')
+library('readxl')
+ads<-read.csv('d:/advertising.csv')
+View(ads)
+nrow(ads)
+ncol(ads)
+colnames(ads)
+Tv<-ads$TV
+Sales<-ads$Sales
+plot(Tv,Sales)
+model<-lm(Sales~Tv)
+summary(model)
+attributes(model)
+coefficients(model)
+coef(model)
+abline(model)
+
+
+
+#Linear Regression
+a<-c(151,174,138,186,128,136,179,163,152,131)
+b<-c(63,81,56,91,47,57,76,72,62,48)
+relation<-lm(b~a)
+a<-data.frame(a=170)
+result<-predict(relation,a)
+print(result)
+*
